@@ -59,6 +59,46 @@ header nav ul li a{
 }
 
 /* Fin header */
+/* Sección título portada */
+#title_cover {
+  width: 90%;
+  max-width: 800px;
+  padding: 30px;
+  background-color: rgba(5, 94, 119, 0.8);
+  border-radius: 15px;
+  text-align: center;
+  position: absolute; /* Para colocar el título sobre la imagen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+#title_cover h1 {
+  font-size: 2rem;
+  color: #f8fafc;
+  margin: 0;
+}
+/* Fin sección título portada */
+/* Imagen de portada */
+#image_header {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Para colocar el título sobre la imagen */
+}
+
+#image_header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: blur(5px);
+}
+/* Fin imagen de portada */
 /* Proyectos */
 .separator{
     display: flex;
@@ -73,7 +113,7 @@ header nav ul li a{
     border-radius: 5%;
 }
 #projects:hover{
-   background-color: #fbbf24;
+   background-color: #1436cb;
    transform: translateY(1px);
    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
@@ -89,17 +129,27 @@ section#projects,section#about, section#contact, section#jobs, section#works {
     max-width: 1000px;
     margin: 20px auto;
     padding: 30px;
-    background-color: #8e6e04;
     text-align: center;
     transition: all 0.3s ease;
 }
-
+section#projects{
+    background-color: rgb(80, 94, 189);
+}
+section#about{
+    background-color: rgb(27, 91, 209);
+} 
+section#contact{
+    background-color: rgb(154, 23, 219);
+}
+section#jobs{
+    background-color: rgb(8, 130, 26);
+} 
 section#works{
-    background-color: rgb(171, 96, 4);
+    background-color: rgb(7, 93, 13);
     min-height: 200px;
 }
-#works:hover{
-   background-color: #fbbf24;
+section#works:hover{
+   background-color: rgb(8, 130, 26);
    transform: translateY(1px);
    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
