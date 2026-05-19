@@ -8,14 +8,14 @@ html {
   scroll-behavior: smooth;
 }
 
-h2{
-    font-family: 'Inter', sans-serif;
+h2, h1{
+    font-family: "Courier New", Courier, monospace;
 }
 
 body {
   background: linear-gradient(80deg, #0a1a33, #10264d, #152239);
 }
-
+/* Inicio header */
 header {
   background-color: #055e77;
   text-align: center;
@@ -23,6 +23,7 @@ header {
   border-bottom: 1px solid #1f2937;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 header h1 {
@@ -36,19 +37,54 @@ header nav ul{
     justify-content: center;
     gap: 20px;
     margin-top: 10px;
-    
 }
 header nav ul li a{ 
     color: #f8fafc;
     text-align: center;
     padding: 20px 0;
-    border-bottom: 1px solid #1f2937;
     position: sticky;
     top: 0;
     text-decoration: none;
-}  
+} 
+.boton-menu{
+    border: 1px solid #1f2937;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+.boton-menu:hover{
+    background-color: #269ab7;
+    transform: translateY(1px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
 
-section{
+/* Fin header */
+/* Proyectos */
+.separator{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: auto;
+    max-width: 1000px;
+    min-height: 350px;
+    
+}
+#projects{
+    border-radius: 5%;
+}
+#projects:hover{
+   background-color: #fbbf24;
+   transform: translateY(1px);
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+section img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+/* Fin proyectos */ 
+section#projects,section#about, section#contact, section#jobs, section#works {
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
@@ -58,11 +94,17 @@ section{
     transition: all 0.3s ease;
 }
 
-section:hover{
+section#works{
+    background-color: rgb(171, 96, 4);
+    min-height: 200px;
+}
+#works:hover{
    background-color: #fbbf24;
    transform: translateY(1px);
    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
+
+
 
 footer {
   padding: 30px 0;
@@ -70,4 +112,33 @@ footer {
   border-top: 1px solid #1f2937;
   color: #94a3b8;
   background-color: #111827;
+}
+
+@keyframes entradaSuave {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#works{
+  animation: entradaSuave 1s ease;
+  animation: fadeIn 4s ease;
+}
+
+section {
+  animation: entradaSuave 1s ease;
 }
