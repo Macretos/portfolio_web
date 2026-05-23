@@ -30,7 +30,7 @@ function removeWaveEffect(element) {
 document.querySelectorAll('section[id="projects"], section[id="about"], section[id="works"]').forEach(section => {
   const heading = section.querySelector('h2');
   
-  if (heading) {
+  if (heading && heading.textContent.trim() !== 'Soon...' ) {
     section.addEventListener('mouseenter', () => {
       createWaveEffect(heading);
     });
