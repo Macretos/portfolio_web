@@ -40,3 +40,39 @@ document.querySelectorAll('section[id="projects"], section[id="about"], section[
     });
   }
 });
+
+
+//Nuevas funciones
+function suma(numbers){
+  let sum = 0;
+  for(let i = 0; i < numbers.length; i++){  
+    sum += numbers[i];
+  }
+  return sum;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+console.log(suma(numbers)); // Output: 15
+console.log("Soy demasiado gay");
+
+
+
+function calculateInvestment() {
+  const initialInput = parseFloat(document.getElementById('initialInput').value);
+  const monthlyInput = parseFloat(document.getElementById('monthlyInput').value);
+  const interestInput = parseFloat(document.getElementById('interestInput').value);
+  const yearsInput = parseFloat(document.getElementById('yearsInput').value);
+  
+  const monthlyInterest = interestInput / 100 / 12;
+  const totalMonths = yearsInput * 12;
+  let totalInvestment = initialInput;
+  
+  for (let month = 1; month <= totalMonths; month++) {
+    totalInvestment += monthlyInput;
+    totalInvestment += totalInvestment * monthlyInterest;
+  }
+  
+  document.getElementById('result').textContent = parseFloat(totalInvestment.toFixed(2));
+}
+
+

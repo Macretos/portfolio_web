@@ -139,7 +139,7 @@ header nav ul li a{
    transform: translateY(1px);
    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
-#projects:nth-of-type(1):hover{
+#projects:nth-of-type(1):hover , #projects:nth-of-type(2):hover{
    background-color: #505760;
    transform: translateY(1px);
    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -232,4 +232,40 @@ section {
   display: inline-block;
   animation: ola 0.6s ease-in-out;
   white-space: pre;
+}
+
+section#interes_compuesto{
+  width: 70%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #262b32;
+  border-radius: 10%;
+}
+
+section#interes_compuesto h2{
+  margin-bottom: 25px;
+}
+
+/* Estilos para el formulario de inversión */
+input, button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 70%;
+  max-width: 400px;
+  border: 1px solid #1f2937;
+  border-radius: 5px;
+  background-color: #f8fafc;
+  justify-content: center;
+
+}
+
+
+.movie{
+  max-width: 200px;
+  background-color: #1663ce;
+  margin: auto;
 }

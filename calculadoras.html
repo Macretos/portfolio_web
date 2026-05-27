@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Miguélez | Personal Projects</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <header>
+        <h1>Daniel Miguélez | Software Developer</h1>
+        <div class = "container1">
+        <nav>
+            <ul>
+                <li class="boton-menu"><a onclick="window.location.href='index.html'">About Me</a></li>
+                <li class="boton-menu"><a href="#interes_compuesto">Projects</a></li>
+                <li class="boton-menu"><a onclick="window.location.href='index.html'">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <section id="interes_compuesto">
+    <h2>Calculadora de Interés Compuesto</h2>
+    <input type="text" id="initialInput" placeholder="Enter your initial investment">
+    <input type="text" id="monthlyInput" placeholder="Enter your monthly investment">
+    <input type="text" id="interestInput" placeholder="Enter your yearly interest rate">
+    <input type="text" id="yearsInput" placeholder="Enter the number of years">
+    <button onclick="calculateInvestment()">Calculate</button>
+    <p>Importe estimado después de años: </p>
+    <p id="result"></p>   
+    </section>
+
+    <div class="¨movie">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+    <rect x=0 y=0 width=100 height=100 fill="burlywood"/>
+    <path d="M 10 10 H 90 V 90 L 10 60" fill="transparent" stroke="black" stroke-width="3"/>
+    <circle cx=50 cy=50 r=20 class="svg-circle"/>
+    <g class="svg-text-group">
+      <text x="20" y="25" rotate="10" id="hello-text">Hello!</text>
+      <use href="#hello-text" x="-10" y="65" fill="white"/>
+    </g>
+    </svg>
+    </div>
+
+
+    
+    <footer>
+        <div class="container2">
+        <p>&copy; 2026 Daniel Miguélez. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
